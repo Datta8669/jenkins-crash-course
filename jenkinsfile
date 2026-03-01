@@ -19,7 +19,8 @@ pipeline {
 
     post {
         success {
-            echo 'Build Successful!'
+            echo 'Build Successfulllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll!'
+            echo 'i m now deops engineer------------------------------------------------'
         }
         failure {
             echo 'Build Failed!'
