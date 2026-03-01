@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/Datta8669/jenkins-crash-course'
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                sh 'javac Main.java'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                sh 'java Main'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build Successful!'
+        }
+        failure {
+            echo 'Build Failed!'
+        }
+    }
+}
