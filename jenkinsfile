@@ -6,13 +6,13 @@ pipeline {
 
         stage('Compile') {
             steps {
-                sh 'javac Main.java'
+                bat 'javac Main.java'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'java Main'
+                bat 'java Main'
             }
         }
     }
